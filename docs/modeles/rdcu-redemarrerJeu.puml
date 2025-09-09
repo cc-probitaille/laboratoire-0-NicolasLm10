@@ -1,1 +1,20 @@
-// Vous devez complétéer ce fichier
+@startuml RDCU pour redemarrerJeu
+title RDCU pour redemarrerJeu
+hide footbox
+skinparam style strictuml
+skinparam packageStyle rect
+skinparam backgroundcolor transparent
+skinparam defaultfontname Verdana
+participant ":JeuDeDes" as JDD
+participant "joueurs:\nMap<String, Joueur>" as S
+-> JDD : redemarrerJeu()
+note right
+    selon Contrôleur 
+    (JeuDeDés est
+    l'objet racine)
+end note
+JDD -> S : clear()
+note right
+    selon Expert
+end note
+@enduml
